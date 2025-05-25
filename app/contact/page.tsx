@@ -156,9 +156,9 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold text-gray-900">Address</h3>
                       <p className="text-gray-600">
-                        123 Main Street
+                        Vithai Enterprises, near hotel shorywada, Kunjirwadi, 
                         <br />
-                        Anytown, ST 12345
+                        Loni Kalbhor, Maharashtra 412201
                       </p>
                     </div>
                   </div>
@@ -167,7 +167,7 @@ export default function ContactPage() {
                     <Phone className="h-6 w-6 text-blue-600 mt-1" />
                     <div>
                       <h3 className="font-semibold text-gray-900">Phone</h3>
-                      <p className="text-gray-600">(555) 123-4567</p>
+                      <p className="text-gray-600">9730665390</p>
                     </div>
                   </div>
 
@@ -175,7 +175,7 @@ export default function ContactPage() {
                     <Mail className="h-6 w-6 text-blue-600 mt-1" />
                     <div>
                       <h3 className="font-semibold text-gray-900">Email</h3>
-                      <p className="text-gray-600">info@autofixworkshop.com</p>
+                      <p className="text-gray-600">vedantmahalle39@gmail.com</p>
                     </div>
                   </div>
 
@@ -203,7 +203,7 @@ export default function ContactPage() {
                       <p className="text-gray-600 mb-4">Chat with us directly on WhatsApp for quick assistance</p>
                       <Button asChild className="bg-green-600 hover:bg-green-700">
                         <a
-                          href="https://wa.me/1234567890?text=Hi, I need help with my car repair"
+                          href="https://wa.me/9730665390?text=Hi, I need help with my car repair"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
