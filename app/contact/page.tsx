@@ -203,7 +203,7 @@ export default function ContactPage() {
                       <p className="text-gray-600 mb-4">Chat with us directly on WhatsApp for quick assistance</p>
                       <Button asChild className="bg-green-600 hover:bg-green-700">
                         <a
-                          href="https://wa.me/9730665390?text=Hi, I need help with my car repair"
+                          href="https://wa.me/919730665390?text=Hi, I need help with my car repair"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
