@@ -39,24 +39,24 @@ export default function Footer() {
           <motion.div variants={itemVariants} className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <Wrench className="h-8 w-8 text-blue-400" />
-              <span className="text-2xl font-bold">AutoFix Workshop</span>
+              <span className="text-2xl font-bold">Vithai Enterprise</span>
             </div>
             <p className="text-gray-300 dark:text-gray-400 mb-6 max-w-md">
-              Professional automotive repair services with over 15 years of experience. Your trusted partner for
+              Professional automotive repair services with years of experience. Your trusted partner for
               reliable, honest car repair.
             </p>
             <div className="space-y-2">
               <motion.div className="flex items-center space-x-3" whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
                 <Phone className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-300 dark:text-gray-400">(555) 123-4567</span>
+                <span className="text-gray-300 dark:text-gray-400">+91 97306 65390</span>
               </motion.div>
               <motion.div className="flex items-center space-x-3" whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
                 <Mail className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-300 dark:text-gray-400">info@autofixworkshop.com</span>
+                <span className="text-gray-300 dark:text-gray-400">vedandmahalle39@gmail.com</span>
               </motion.div>
               <motion.div className="flex items-center space-x-3" whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
                 <MapPin className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-300 dark:text-gray-400">123 Main Street, Anytown, ST 12345</span>
+                <span className="text-gray-300 dark:text-gray-400">Near Hotel Shorywada, Kunjirwadi, Loni Kalbhor, Maharashtra 412201</span>
               </motion.div>
             </div>
           </motion.div>
@@ -112,7 +112,7 @@ export default function Footer() {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="border-t border-gray-800 dark:border-gray-700 mt-8 pt-8 text-center"
         >
-          <p className="text-gray-400 dark:text-gray-500">© 2024 AutoFix Workshop. All rights reserved.</p>
+          <p className="text-gray-400 dark:text-gray-500">© 2024 Vithai Enterprise. All rights reserved.</p>
         </motion.div>
       </div>
     </footer>

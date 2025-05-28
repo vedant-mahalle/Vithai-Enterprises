@@ -83,7 +83,7 @@ export default function ContactPage() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto"
           >
-            Get in touch with us for all your automotive repair needs
+            Get in touch with Vithai Enterprise for all your automotive repair needs
           </motion.p>
         </motion.div>
       </section>
@@ -94,13 +94,17 @@ export default function ContactPage() {
           <motion.div
             variants={containerVariants}
             initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            animate="visible"
             className="grid lg:grid-cols-2 gap-12"
           >
             {/* Contact Form */}
             <motion.div variants={itemVariants}>
-              <motion.div whileHover={{ y: -5 }} transition={{ duration: 0.3 }}>
+              <motion.div 
+                whileHover={{ y: -5 }} 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
                 <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
                   <CardHeader>
                     <CardTitle className="text-2xl text-gray-900 dark:text-white">Send Us a Message</CardTitle>
@@ -109,8 +113,7 @@ export default function ContactPage() {
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <motion.div
                         initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5 }}
                         className="grid md:grid-cols-2 gap-4"
                       >
@@ -145,8 +148,7 @@ export default function ContactPage() {
 
                       <motion.div
                         initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.1 }}
                       >
                         <Label htmlFor="email" className="text-gray-700 dark:text-gray-300">
@@ -165,8 +167,7 @@ export default function ContactPage() {
 
                       <motion.div
                         initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
                       >
                         <Label htmlFor="service" className="text-gray-700 dark:text-gray-300">
@@ -195,8 +196,7 @@ export default function ContactPage() {
 
                       <motion.div
                         initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.3 }}
                       >
                         <Label htmlFor="message" className="text-gray-700 dark:text-gray-300">
@@ -216,8 +216,7 @@ export default function ContactPage() {
 
                       <motion.div
                         initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.4 }}
                       >
                         <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
@@ -238,7 +237,12 @@ export default function ContactPage() {
 
             {/* Contact Information */}
             <motion.div variants={itemVariants} className="space-y-8">
-              <motion.div whileHover={{ y: -5 }} transition={{ duration: 0.3 }}>
+              <motion.div 
+                whileHover={{ y: -5 }} 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
                 <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
                   <CardHeader>
                     <CardTitle className="text-2xl text-gray-900 dark:text-white">Get in Touch</CardTitle>
@@ -253,9 +257,13 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-semibold text-gray-900 dark:text-white">Address</h3>
                         <p className="text-gray-600 dark:text-gray-300">
-                          123 Main Street
+                          Vithai Enterprise,
                           <br />
-                          Anytown, ST 12345
+                          Near Hotel Shorywada,
+                          <br />
+                          Kunjirwadi, Loni Kalbhor,
+                          <br />
+                          Maharashtra 412201
                         </p>
                       </div>
                     </motion.div>
@@ -268,7 +276,7 @@ export default function ContactPage() {
                       <Phone className="h-6 w-6 text-blue-600 dark:text-blue-400 mt-1" />
                       <div>
                         <h3 className="font-semibold text-gray-900 dark:text-white">Phone</h3>
-                        <p className="text-gray-600 dark:text-gray-300">(555) 123-4567</p>
+                        <p className="text-gray-600 dark:text-gray-300">+91 97306 65390</p>
                       </div>
                     </motion.div>
 
@@ -280,7 +288,7 @@ export default function ContactPage() {
                       <Mail className="h-6 w-6 text-blue-600 dark:text-blue-400 mt-1" />
                       <div>
                         <h3 className="font-semibold text-gray-900 dark:text-white">Email</h3>
-                        <p className="text-gray-600 dark:text-gray-300">info@autofixworkshop.com</p>
+                        <p className="text-gray-600 dark:text-gray-300">vedandmahalle39@gmail.com</p>
                       </div>
                     </motion.div>
 
@@ -304,7 +312,12 @@ export default function ContactPage() {
               </motion.div>
 
               {/* WhatsApp CTA */}
-              <motion.div whileHover={{ y: -5, scale: 1.02 }} transition={{ duration: 0.3 }}>
+              <motion.div 
+                whileHover={{ y: -5, scale: 1.02 }} 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+              >
                 <Card className="bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800">
                   <CardContent className="p-6">
                     <div className="flex items-center space-x-4">
@@ -322,7 +335,7 @@ export default function ContactPage() {
                             className="bg-green-600 hover:bg-green-700 dark:bg-green-600 dark:hover:bg-green-700"
                           >
                             <a
-                              href="https://wa.me/1234567890?text=Hi, I need help with my car repair"
+                              href="https://wa.me/919730665390?text=Hi, I need help with my car repair"
                               target="_blank"
                               rel="noopener noreferrer"
                             >
@@ -336,26 +349,38 @@ export default function ContactPage() {
                 </Card>
               </motion.div>
 
-              {/* Map Placeholder */}
-              <motion.div whileHover={{ y: -5 }} transition={{ duration: 0.3 }}>
+              {/* Interactive Map */}
+              <motion.div 
+                whileHover={{ y: -5 }} 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+              >
                 <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
                   <CardHeader>
                     <CardTitle className="text-xl text-gray-900 dark:text-white">Find Us</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <motion.div
-                      className="bg-gray-200 dark:bg-gray-700 h-64 rounded-lg flex items-center justify-center"
+                      className="w-full h-64 rounded-lg overflow-hidden"
                       whileHover={{ scale: 1.02 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <div className="text-center text-gray-500 dark:text-gray-400">
-                        <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.3 }}>
-                          <MapPin className="h-12 w-12 mx-auto mb-2" />
-                        </motion.div>
-                        <p>Interactive Map</p>
-                        <p className="text-sm">123 Main Street, Anytown, ST 12345</p>
-                      </div>
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.4776035132837!2d74.03769009999999!3d18.4891812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2e7ad165b6f89%3A0x6ee1767014996e02!2sVithai%20Enterprises!5e0!3m2!1sen!2sin!4v1711004391247!5m2!1sen!2sin"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                      ></iframe>
                     </motion.div>
+                    <div className="mt-4 text-center text-gray-500 dark:text-gray-400">
+                      <p className="font-medium">Vithai Enterprises</p>
+                      <p className="text-sm">Near Hotel Shorywada, Kunjirwadi</p>
+                      <p className="text-sm">Loni Kalbhor, Maharashtra 412201</p>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>

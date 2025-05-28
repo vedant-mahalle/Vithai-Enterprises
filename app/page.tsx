@@ -53,13 +53,13 @@ export default function HomePage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative h-[600px] flex items-center justify-center bg-gradient-to-r from-gray-900 to-gray-700 dark:from-gray-950 dark:to-gray-800">
+      <section className="relative h-[700px] flex items-center justify-center bg-gradient-to-r from-gray-900 to-gray-700 dark:from-gray-950 dark:to-gray-800">
         <div className="absolute inset-0">
           <Image
-            src="/placeholder.svg?height=600&width=1200"
+            src="https://img.freepik.com/free-photo/mechanic-servicing-car_1170-1689.jpg?semt=ais_hybrid&w=740"
             alt="Car repair workshop"
             fill
-            className="object-cover opacity-30"
+            className="object-cover opacity-45"
           />
         </div>
         <motion.div
@@ -100,7 +100,7 @@ export default function HomePage() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white hover:text-gray-900"
+                className="bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-gray-900 dark:hover:text-gray-900"
               >
                 <Link href="/services">View Services</Link>
               </Button>
@@ -229,8 +229,8 @@ export default function HomePage() {
             >
               <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }} className="relative h-full">
                 <Image
-                  src="/placeholder.svg?height=400&width=500"
-                  alt="Workshop interior"
+                  src="https://lh3.googleusercontent.com/p/AF1QipMaWmKPh4udMI94dBcJfywBTN08tiH8dCogrWnB=s680-w680-h510-rw"
+                  alt="Vithai Enterprise Workshop"
                   fill
                   className="object-cover rounded-lg"
                 />
@@ -278,9 +278,9 @@ export default function HomePage() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-blue-600"
+                className="bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-blue-600 dark:hover:text-blue-600"
               >
-                <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/919730665390" target="_blank" rel="noopener noreferrer">
                   WhatsApp Us
                 </a>
               </Button>

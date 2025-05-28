@@ -126,13 +126,22 @@ export default function ServicesPage() {
           <motion.div
             variants={containerVariants}
             initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            animate="visible"
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {services.map((service, index) => (
               <motion.div key={index} variants={itemVariants}>
-                <motion.div whileHover={{ y: -10, scale: 1.02 }} transition={{ duration: 0.3 }} className="h-full">
+                <motion.div 
+                  whileHover={{ y: -10, scale: 1.02 }} 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ 
+                    duration: 0.5, 
+                    delay: index * 0.1,
+                    hover: { duration: 0.3 }
+                  }}
+                  className="h-full"
+                >
                   <Card className="hover:shadow-lg transition-shadow h-full bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
                     <CardHeader className="text-center pb-4">
                       <motion.div
@@ -151,8 +160,7 @@ export default function ServicesPage() {
                           <motion.li
                             key={featureIndex}
                             initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.3, delay: featureIndex * 0.1 }}
                             className="flex items-center text-sm text-gray-600 dark:text-gray-300"
                           >
