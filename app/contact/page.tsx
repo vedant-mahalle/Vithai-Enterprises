@@ -24,9 +24,28 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Here you would typically send the form data to your backend
-    console.log("Form submitted:", formData)
-    alert("Thank you for your message! We will get back to you soon.")
+    
+    // Format the message for WhatsApp
+    const message = `
+*New Service Request*
+------------------
+*Name:* ${formData.name}
+*Phone:* ${formData.phone}
+*Email:* ${formData.email}
+*Service:* ${formData.service}
+*Message:* ${formData.message}
+    `.trim()
+
+    // Encode the message for WhatsApp URL
+    const encodedMessage = encodeURIComponent(message)
+    
+    // WhatsApp URL with your number and the encoded message
+    const whatsappURL = `https://wa.me/919730665390?text=${encodedMessage}`
+    
+    // Open WhatsApp in a new tab
+    window.open(whatsappURL, '_blank')
+    
+    // Reset the form
     setFormData({ name: "", email: "", phone: "", service: "", message: "" })
   }
 
@@ -218,14 +237,36 @@ export default function ContactPage() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.4 }}
+                        className="space-y-4"
                       >
                         <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                           <Button
                             type="submit"
                             size="lg"
-                            className="w-full bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700"
+                            className="w-full bg-green-600 hover:bg-green-700 dark:bg-green-600 dark:hover:bg-green-700"
                           >
-                            Send Message
+                            Send via WhatsApp
+                          </Button>
+                        </motion.div>
+                        
+                        <div className="relative">
+                          <div className="absolute inset-0 flex items-center">
+                            <span className="w-full border-t border-gray-300 dark:border-gray-600" />
+                          </div>
+                          <div className="relative flex justify-center text-sm">
+                            <span className="px-2 bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400">or</span>
+                          </div>
+                        </div>
+
+                        <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                          <Button
+                            type="button"
+                            size="lg"
+                            variant="outline"
+                            className="w-full border-blue-600 text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-900/20"
+                            onClick={() => window.open('https://forms.gle/your-form-url', '_blank')}
+                          >
+                            Submit via Google Form
                           </Button>
                         </motion.div>
                       </motion.div>
