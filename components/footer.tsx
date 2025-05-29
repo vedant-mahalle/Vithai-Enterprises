@@ -138,6 +138,13 @@ export default function Footer() {
             >
               Vedant Mahalle
             </a>
+            <br />
+            <a 
+              href="tel:+919730665390"
+              className="text-blue-400 hover:text-blue-300 transition-colors"
+            >
+              Call Me On Click
+            </a>
           </div>
         </motion.div>
       </div>
