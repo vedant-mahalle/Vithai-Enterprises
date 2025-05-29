@@ -54,6 +54,27 @@ export default function AboutPage() {
     },
   ]
 
+  const workshopTools = [
+    {
+      name: "Diagnostic Scanner",
+      description: "Advanced OBD-II diagnostic tool for accurate vehicle diagnostics",
+      category: "Diagnostics Equipment",
+      image: "https://img.freepik.com/free-photo/car-diagnostic-equipment_1170-1573.jpg?w=740&t=st=1711005433~exp=1711006033~hmac=6a2e4f4f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f",
+    },
+    {
+      name: "Alignment System",
+      description: "3D wheel alignment system for precise wheel balancing and alignment",
+      category: "Alignment Tools",
+      image: "https://img.freepik.com/free-photo/wheel-alignment-check-car-service_1303-26941.jpg?w=740&t=st=1711005461~exp=1711006061~hmac=6a2e4f4f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f",
+    },
+    {
+      name: "Engine Analyzer",
+      description: "High-tech engine analysis system for comprehensive engine diagnostics",
+      category: "Engine Tools",
+      image: "https://img.freepik.com/free-photo/mechanic-using-diagnostic-tool-car-engine_1170-1611.jpg?w=740&t=st=1711005486~exp=1711006086~hmac=6a2e4f4f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f9f",
+    },
+  ]
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -258,6 +279,60 @@ export default function AboutPage() {
                       <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{member.name}</h3>
                       <p className="text-blue-600 dark:text-blue-400 font-medium mb-2">{member.role}</p>
                       <p className="text-gray-600 dark:text-gray-300">{member.experience} experience</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Tools Section */}
+      <section className="py-16 px-4 bg-gray-50 dark:bg-gray-800">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              Professional Tools & Equipment
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              We invest in state-of-the-art equipment to provide accurate diagnostics and reliable repairs
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            className="grid md:grid-cols-3 gap-8"
+          >
+            {workshopTools.map((tool, index) => (
+              <motion.div key={index} variants={itemVariants}>
+                <motion.div whileHover={{ y: -10, scale: 1.02 }} transition={{ duration: 0.3 }}>
+                  <Card className="text-center hover:shadow-lg transition-shadow bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 overflow-hidden">
+                    <CardContent className="p-6">
+                      <motion.div
+                        className="relative w-full h-48 mb-6"
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <Image
+                          src={tool.image}
+                          alt={tool.name}
+                          fill
+                          className="object-cover rounded-lg"
+                        />
+                      </motion.div>
+                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{tool.name}</h3>
+                      <p className="text-blue-600 dark:text-blue-400 font-medium mb-2">{tool.category}</p>
+                      <p className="text-gray-600 dark:text-gray-300">{tool.description}</p>
                     </CardContent>
                   </Card>
                 </motion.div>

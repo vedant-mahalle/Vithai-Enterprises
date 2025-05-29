@@ -22,31 +22,31 @@ export default function ContactPage() {
     message: "",
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     
-    // Format the message for WhatsApp
-    const message = `
-*New Service Request*
-------------------
-*Name:* ${formData.name}
-*Phone:* ${formData.phone}
-*Email:* ${formData.email}
-*Service:* ${formData.service}
-*Message:* ${formData.message}
-    `.trim()
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
 
-    // Encode the message for WhatsApp URL
-    const encodedMessage = encodeURIComponent(message)
-    
-    // WhatsApp URL with your number and the encoded message
-    const whatsappURL = `https://wa.me/919730665390?text=${encodedMessage}`
-    
-    // Open WhatsApp in a new tab
-    window.open(whatsappURL, '_blank')
-    
-    // Reset the form
-    setFormData({ name: "", email: "", phone: "", service: "", message: "" })
+      if (!response.ok) {
+        throw new Error('Failed to submit form')
+      }
+
+      // Show success message
+      alert('Thank you for your message! We will get back to you soon.')
+      
+      // Reset the form
+      setFormData({ name: "", email: "", phone: "", service: "", message: "" })
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      alert('Failed to submit form. Please try again or contact us directly.')
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {

@@ -48,15 +48,32 @@ export default function Footer() {
             <div className="space-y-2">
               <motion.div className="flex items-center space-x-3" whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
                 <Phone className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-300 dark:text-gray-400">+91 97306 65390</span>
+                <a 
+                  href="tel:+919730665390" 
+                  className="text-gray-300 dark:text-gray-400 hover:text-blue-400 transition-colors"
+                >
+                  +91 97306 65390
+                </a>
               </motion.div>
               <motion.div className="flex items-center space-x-3" whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
                 <Mail className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-300 dark:text-gray-400">vedandmahalle39@gmail.com</span>
+                <a 
+                  href="mailto:vedandmahalle39@gmail.com"
+                  className="text-gray-300 dark:text-gray-400 hover:text-blue-400 transition-colors"
+                >
+                  vedandmahalle39@gmail.com
+                </a>
               </motion.div>
               <motion.div className="flex items-center space-x-3" whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
                 <MapPin className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-300 dark:text-gray-400">Near Hotel Shorywada, Kunjirwadi, Loni Kalbhor, Maharashtra 412201</span>
+                <a 
+                  href="https://www.google.com/maps/search/?api=1&query=Vithai+Enterprise+near+Hotel+Shorywada+Kunjirwadi+Loni+Kalbhor+Maharashtra+412201"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 dark:text-gray-400 hover:text-blue-400 transition-colors"
+                >
+                  Near Hotel Shorywada, Kunjirwadi, Loni Kalbhor, Maharashtra 412201
+                </a>
               </motion.div>
             </div>
           </motion.div>
@@ -110,9 +127,18 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="border-t border-gray-800 dark:border-gray-700 mt-8 pt-8 text-center"
+          className="border-t border-gray-800 dark:border-gray-700 mt-8 pt-8 text-center space-y-4"
         >
           <p className="text-gray-400 dark:text-gray-500">© 2024 Vithai Enterprise. All rights reserved.</p>
+          <div className="text-gray-400 dark:text-gray-500">
+            Developed with ❤️ by{" "}
+            <a 
+              href="https://www.linkedin.com/in/mahalle-vedant"
+              className="text-blue-400 hover:text-blue-300 transition-colors"
+            >
+              Vedant Mahalle
+            </a>
+          </div>
         </motion.div>
       </div>
     </footer>
